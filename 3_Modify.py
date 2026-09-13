@@ -26,7 +26,7 @@ Here is the same code snippet again. Your task is to make the following modifica
 """
 
 # A simple program to check age for a movie ticket
-age = 15
+age = 65
 
 print("Welcome to the theater!")
 

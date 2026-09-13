@@ -12,15 +12,13 @@ Explain your reasoning in a sentence or two.
 ### Your Prediction
 
 **Predicted Output:**
-
-```
-(Write what you think the program will print here)
-```
+Ticket price: $12 (Teen)
+Enjoy the show!
 
 **Reasoning:**
-
-(Explain why you think it will produce that output)
-
+The program will compare the age variable to the condition. Since the first if statement is true, then the program will
+print what the rest of the if statement says to do and skip over the elif and else statements to then print the ending
+message.
 """
 
 # A simple program to check age for a movie ticket
@@ -48,9 +46,11 @@ What do you think will be printed to the screen when this program runs?
 """
 
 # Your Prediction:
-#
+# The program will print:
+# It's not too hot today
 # Your Reasoning:
-#
+# The program will compare the temperature variable to the if statement first. Since the variable makes the if statement
+# false, the program will then skip to the else statement, which is to print "It's not too hot today."
 
 temperature = 25
 
