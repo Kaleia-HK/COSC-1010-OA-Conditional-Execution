@@ -12,28 +12,48 @@ Here is the same code snippet again. Your task is to make the following modifica
 1.  **Change the `age`:**
     * **Modification:** Change the line `age = 15` to `age = 65`.
     * **Predict:** What will the new output be?
+# The new output will be:
+# Ticket price: $15 (Adult)
+# Enjoy the show!
     * **Verify:** Run the code. Was your prediction correct?
+# Yes, my prediction is correct.
 
 2.  **Add a Senior Discount:**
-    * **Modification:** Add a new `elif` block to give a discount to seniors (age 65 and over). The price should be $10. Place this new block *before* the final `else`.
+    * **Modification:** Add a new `elif` block to give a discount to seniors (age 65 and over).
+        The price should be $10. Place this new block *before* the final `else`.
     * **Predict:** With `age` still set to 65, what will the output be now?
+# The output will be:
+# Ticket price: $10 (Senior)
+# Enjoy the show!
     * **Verify:** Run the code. Was your prediction correct?
+# Yes, my prediction is correct.
 
 3.  **Combine Conditions:**
-    * **Modification:** Let's say there's a special student discount. Modify the `elif age < 18:` line to also check if the person has a student ID. The code might look something like this (you'll need to add a new variable for the student ID): `elif age < 18 and has_student_id == True:`.
-    * **Predict:** What do you need to add to the program for this to work? How will the output change if `age` is 16 and `has_student_id` is `False`?
+    * **Modification:** Let's say there's a special student discount. Modify the `elif age < 18:` line to also check
+        if the person has a student ID. The code might look something like this (you'll need to add a new variable for
+        the student ID): `elif age < 18 and has_student_id == True:`.
+    * **Predict:** What do you need to add to the program for this to work? How will the output change if `age` is 16
+        and `has_student_id` is `False`?
+# For this program to work, I need to add the 'has_student_id' variable before the if-statements, then an if/else statement
+# that adds the discount nested in the `elif age < 18` function. If `age` is set to 16 and `has_student_id` is `False`, then
+# then the output would be: Ticket price: $12 (Teen) Enjoy the show!
     * **Verify:** Make the changes and run the code to check your prediction.
 """
 
 # A simple program to check age for a movie ticket
-age = 65
-
+age = 16
+has_student_id = False
 print("Welcome to the theater!")
 
 if age < 13:
     print("Ticket price: $8 (Child)")
 elif age < 18:
-    print("Ticket price: $12 (Teen)")
+    if has_student_id == True:
+        print("Ticket price: $6 (Student Discount)")
+    else:
+        print("Ticket price: $12 (Teen)")
+elif age > 65:
+    print("Ticket price: $10 (Senior)")
 else:
     print("Ticket price: $15 (Adult)")
 
@@ -52,12 +72,17 @@ divided by 2. The modulo operator (%) gives you the remainder.
 For example, `10 % 2` is 0, but `9 % 2` is 1.
 """
 
-number = 10 # Feel free to change this to test
+number = 9 # Feel free to change this to test
 
 # --- MODIFY THE CODE BELOW ---
 
 if number > 0:
-  print("The number is positive.")
+    print("The number is positive")
+    if number % 2 == 0:
+        print("The number is EVEN")
+    else:
+        print("The number is not EVEN")
+
 else:
   print("The number is not positive.")
 
@@ -77,12 +102,13 @@ weight = 15 # Feel free to change this to test
 shipping_cost = 0
 
 if weight <= 2:
-  shipping_cost = 5.00
+    shipping_cost = 5.00
 elif weight <= 10:
-  shipping_cost = 10.00
-# --- ADD YOUR ELIF BLOCK HERE ---
+    shipping_cost = 10.00
+elif weight <= 20:
+    shipping_cost = 15.00
 else:
-  shipping_cost = 25.00 # For heavy items
+    shipping_cost = 25.00 # For heavy items
 
 print(f"The shipping cost for an item weighing {weight} pounds is ${shipping_cost:.2f}.")
 

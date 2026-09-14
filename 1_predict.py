@@ -48,6 +48,7 @@ What do you think will be printed to the screen when this program runs?
 # Your Prediction:
 # The program will print:
 # It's not too hot today
+
 # Your Reasoning:
 # The program will compare the temperature variable to the if statement first. Since the variable makes the if statement
 # false, the program will then skip to the else statement, which is to print "It's not too hot today."

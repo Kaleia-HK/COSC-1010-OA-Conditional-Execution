@@ -21,4 +21,8 @@ Hints:
 3. An `if-elif-else` structure is perfect for this problem.
 """
 
-# --- WRITE YOUR CODE BELOW ---
+number = int(input("Enter a number: "))
+
+if number > 0: print("The number " + str(number) + " is positive.")
+elif number < 0: print("The number " + str(number) + " is negative.")
+else: print("The number " + str(number) + " is zero.")
