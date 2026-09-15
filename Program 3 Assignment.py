@@ -24,4 +24,4 @@ days_dict = {
     7: "Sunday" }
 
 # Pull out the day of the week using the input number and print the result
-print(f"{day_num} = {days_dict[day_num]}")
+print(f"{day_num} = {days_dict.get(day_num, 'is not within the 1 -7 range')}")
